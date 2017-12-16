@@ -6,19 +6,18 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
-public class MainActivity extends AppCompatActivity {
+public class DetailFood extends AppCompatActivity {
 
-    Button sign;
+    Button order;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
-
-        sign = (Button)findViewById(R.id.button);
-        sign.setOnClickListener(new View.OnClickListener() {
+        setContentView(R.layout.activity_detail_food);
+        order = (Button)findViewById(R.id.button2);
+        order.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(MainActivity.this,MenuList.class));
+                startActivity(new Intent(DetailFood.this, OrderSummary.class));
             }
         });
     }
